@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>FoodControl</servlet-name>
+        <servlet-class>Control.FoodControl</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ClientHome</servlet-name>
+        <jsp-file>/client/ClientHomeView.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>DetailControl</servlet-name>
+        <servlet-class>Control.DetailControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClientHome</servlet-name>
+        <url-pattern>/ClientHome</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FoodControl</servlet-name>
+        <url-pattern>/SearchFood</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DetailControl</servlet-name>
+        <url-pattern>/DetailFood</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <scripting-invalid>true</scripting-invalid>
+        </jsp-property-group>
+    </jsp-config>
+    <welcome-file-list>
+        <welcome-file>LoginView.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
