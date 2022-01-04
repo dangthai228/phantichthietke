@@ -46,6 +46,7 @@
         <h2 class="text-white">Price :  ${food.getPrice()}</h2>
         <br><br><!-- comment -->
         <button class="btn btn-lg" type="submit">Order Now !</button>
+		<a class="btn btn-success" href="SearchFood">Back</a>
         </div>
         </div>
     </body>
